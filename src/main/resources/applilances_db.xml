@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<applDb:appliances  xmlns:applDb = "http://www.kotov.jwd35.epam.com/AppliancesDbSchema"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xsi:schemaLocation ="http://www.kotov.jwd35.epam.com/AppliancesDbSchema applilances_db.xsd">
+
+    <ovens>
+        <oven>
+            <name>Bosch</name>
+            <model>HB3456</model>
+            <power_consumption>3300</power_consumption>
+            <weight>30</weight>
+            <capacity>66</capacity>
+            <depth>60</depth>
+            <height>59.4</height>
+            <width>59.5</width>
+        </oven>
+        <oven>
+            <name>Samsung</name>
+            <model>NV68R13</model>
+            <power_consumption>4500</power_consumption>
+            <weight>25</weight>
+            <capacity>68</capacity>
+            <depth>57</depth>
+            <height>59.5</height>
+            <width>59.5</width>
+        </oven>
+        <oven>
+            <name>Gefest</name>
+            <model>602-01H</model>
+            <power_consumption>3200</power_consumption>
+            <weight>25</weight>
+            <capacity>58</capacity>
+            <depth>60</depth>
+            <height>59.5</height>
+            <width>59.8</width>
+        </oven>
+    </ovens>
+
+    <laptops>
+        <laptop>
+            <name>Lenovo</name>
+            <model>T15-R345</model>
+            <battery_capacity>5000</battery_capacity>
+            <os>Windows</os>
+            <memory_ram>4</memory_ram>
+            <storage_memory>1000</storage_memory>
+            <cpu>2400</cpu>
+            <display_inches>15</display_inches>
+        </laptop>
+        <laptop>
+            <name>Acer</name>
+            <model>Swift 1SF-14</model>
+            <battery_capacity>7500</battery_capacity>
+            <os>Linux</os>
+            <memory_ram>16</memory_ram>
+            <storage_memory>750</storage_memory>
+            <cpu>2600</cpu>
+            <display_inches>14</display_inches>
+        </laptop>
+        <laptop>
+            <name>Apple</name>
+            <model>Macbook Air 13</model>
+            <battery_capacity>8000</battery_capacity>
+            <os>Mac OS</os>
+            <memory_ram>16</memory_ram>
+            <storage_memory>500</storage_memory>
+            <cpu>3200</cpu>
+            <display_inches>13</display_inches>
+        </laptop>
+    </laptops>
+
+    <refrigerators>
+        <refrigerator>
+            <name>Atlant</name>
+            <model>XM 43-10</model>
+            <power_consumption>100</power_consumption>
+            <weight>20</weight>
+            <freezer_capacity>10</freezer_capacity>
+            <overall_capacity>300</overall_capacity>
+            <height>200</height>
+            <width>70</width>
+        </refrigerator>
+        <refrigerator>
+            <name>Liebherr</name>
+            <model>CN 4713</model>
+            <power_consumption>200</power_consumption>
+            <weight>30</weight>
+            <freezer_capacity>15</freezer_capacity>
+            <overall_capacity>300</overall_capacity>
+            <height>180</height>
+            <width>80</width>
+        </refrigerator>
+        <refrigerator>
+            <name>LG</name>
+            <model>GA-B509</model>
+            <power_consumption>150</power_consumption>
+            <weight>35</weight>
+            <freezer_capacity>20</freezer_capacity>
+            <overall_capacity>350.5</overall_capacity>
+            <height>250</height>
+            <width>75</width>
+        </refrigerator>
+    </refrigerators>
+
+    <vaccuumcleaners>
+        <vaccuumcleaner>
+            <name>Bosch</name>
+            <model>BGS2U</model>
+            <power_consumption>2500</power_consumption>
+            <vaccuum_power>400</vaccuum_power>
+            <filter_type>A</filter_type>
+            <motor_speed_regulation>3000</motor_speed_regulation>
+            <cleaning_width>20</cleaning_width>
+        </vaccuumcleaner>
+        <vaccuumcleaner>
+            <name>Dyson</name>
+            <model>DC63 Allergy</model>
+            <power_consumption>1150</power_consumption>
+            <vaccuum_power>174</vaccuum_power>
+            <filter_type>B</filter_type>
+            <motor_speed_regulation>2900</motor_speed_regulation>
+            <cleaning_width>25</cleaning_width>
+        </vaccuumcleaner>
+        <vaccuumcleaner>
+            <name>Karcher</name>
+            <model>WD3 Premium</model>
+            <power_consumption>1000</power_consumption>
+            <vaccuum_power>200</vaccuum_power>
+            <filter_type>C</filter_type>
+            <motor_speed_regulation>2950</motor_speed_regulation>
+            <cleaning_width>30</cleaning_width>
+        </vaccuumcleaner>
+    </vaccuumcleaners>
+
+    <tabletpcs>
+        <tabletpc>
+            <name>Apple</name>
+            <model>IPad Pro</model>
+            <battery_capacity>7300</battery_capacity>
+            <display_inches>11</display_inches>
+            <memory_ram>8</memory_ram>
+            <storage_memory>256</storage_memory>
+            <color>Black</color>
+        </tabletpc>
+        <tabletpc>
+            <name>Xiaomi</name>
+            <model>Mi Pad 5</model>
+            <battery_capacity>8720</battery_capacity>
+            <display_inches>11</display_inches>
+            <memory_ram>6</memory_ram>
+            <storage_memory>128</storage_memory>
+            <color>red</color>
+        </tabletpc>
+            <tabletpc>
+            <name>Lenovo</name>
+            <model>M10 FHD</model>
+            <battery_capacity>5000</battery_capacity>
+            <display_inches>10.3</display_inches>
+            <memory_ram>4</memory_ram>
+            <storage_memory>64</storage_memory>
+            <color>Green</color>
+        </tabletpc>
+    </tabletpcs>
+
+    <speakers>
+        <speaker>
+            <name>JBL</name>
+            <model>Stage3 427F</model>
+            <power_consumption>30</power_consumption>
+            <number_of_speakers>4</number_of_speakers>
+            <frequency_range>75-20000</frequency_range>
+            <cord_length>4</cord_length>
+        </speaker>
+        <speaker>
+            <name>Pioneer</name>
+            <model>TS-1639R</model>
+            <power_consumption>50</power_consumption>
+            <number_of_speakers>3</number_of_speakers>
+            <frequency_range>33-32000</frequency_range>
+            <cord_length>3</cord_length>
+        </speaker>
+        <speaker>
+            <name>Ural</name>
+            <model>AS-M130 Molot</model>
+            <power_consumption>60</power_consumption>
+            <number_of_speakers>1</number_of_speakers>
+            <frequency_range>80-15000</frequency_range>
+            <cord_length>2</cord_length>
+        </speaker>
+    </speakers>
+</applDb:appliances>

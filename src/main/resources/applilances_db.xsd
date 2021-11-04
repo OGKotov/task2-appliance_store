@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs = "http://www.w3.org/2001/XMLSchema"
+            targetNamespace = "http://www.kotov.jwd35.epam.com/AppliancesDbSchema"
+            xmlns:applDb = "http://www.kotov.jwd35.epam.com/AppliancesDbSchema"
+            xmlns:characDb = "http://www.kotov.jwd35.epam.com/CharacteristicDbSchema">
+
+    <xs:import namespace = "http://www.kotov.jwd35.epam.com/CharacteristicDbSchema"
+               schemaLocation="characteristic_db.xsd"/>
+
+    <xs:complexType name = "ovens_type">
+        <xs:sequence>
+            <xs:element name="oven" type="characDb:oven_type" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name = "laptops_type">
+        <xs:sequence>
+            <xs:element name="laptop" type="characDb:laptop_type" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name = "refrigerators_type">
+        <xs:sequence>
+            <xs:element name="refrigerator" type="characDb:refrigerator_type" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name = "vaccuumcleaners_type">
+        <xs:sequence>
+            <xs:element name="vaccuumcleaner" type="characDb:vaccuumcleaner_type" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name = "tabletpcs_type">
+        <xs:sequence>
+            <xs:element name="tabletpc" type="characDb:tabletpc_type" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name = "speakers_type">
+        <xs:sequence>
+            <xs:element name="speaker" type="characDb:speaker_type" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name = "appliances_type">
+        <xs:sequence>
+            <xs:element name="ovens" type="ovens_type"/>
+            <xs:element name="laptops" type="laptops_type"/>
+            <xs:element name="refrigerators" type="refrigerators_type"/>
+            <xs:element name="vaccuumcleaners" type="vaccuumcleaners_type"/>
+            <xs:element name="tabletpcs" type="tabletpcs_type"/>
+            <xs:element name="speakers" type="speakers_type"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="appliances" type="appliances_type"/>
+</xs:schema>

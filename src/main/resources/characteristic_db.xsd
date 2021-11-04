@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs = "http://www.w3.org/2001/XMLSchema"
+           targetNamespace = "http://www.kotov.jwd35.epam.com/CharacteristicDbSchema"
+           xmlns:characDb = "http://www.kotov.jwd35.epam.com/CharacteristicDbSchema">
+
+    <xs:element name = "name" type = "xs:string"/>
+    <xs:element name = "model" type = "xs:string"/>
+    <xs:element name = "power_consumption"/>
+    <xs:element name = "capacity"/>
+    <xs:element name = "weight"/>
+    <xs:element name = "depth"/>
+    <xs:element name = "height"/>
+    <xs:element name = "width"/>
+    <xs:element name = "battery_capacity"/>
+    <xs:element name = "os"/>
+    <xs:element name = "memory_ram"/>
+    <xs:element name = "storage_memory"/>
+    <xs:element name = "cpu"/>
+    <xs:element name = "display_inches"/>
+    <xs:element name = "freezer_capacity"/>
+    <xs:element name = "overall_capacity"/>
+    <xs:element name = "vaccuum_power"/>
+    <xs:element name = "filter_type"/>
+    <xs:element name = "motor_speed_regulation"/>
+    <xs:element name = "cleaning_width"/>
+    <xs:element name = "color"/>
+    <xs:element name = "number_of_speakers"/>
+    <xs:element name = "frequency_range"/>
+    <xs:element name = "cord_length"/>
+
+    <xs:complexType name = "oven_type">
+        <xs:sequence>
+            <xs:element ref = "characDb:name"/>
+            <xs:element ref = "characDb:model"/>
+            <xs:element ref = "characDb:power_consumption">
+                <xs:simpleType>
+                    <xs:restriction base="xs:positiveInteger">
+                        <xs:minInclusive value="1200"/>
+                        <xs:maxInclusive value="6200"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element ref = "characDb:weight">
+                <xs:simpleType>
+                    <xs:restriction base="xs:decimal">
+                        <xs:minInclusive value="17"/>
+                        <xs:maxInclusive value="80"/>
+                        <xs:pattern value="(\d{2})(\.?)(\d?)"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element ref="characDb:capacity">
+                <xs:simpleType>
+                    <xs:restriction base="xs:positiveInteger">
+                        <xs:minInclusive value="20"/>
+                        <xs:maxInclusive value="125"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element ref = "characDb:depth">
+                <xs:simpleType>
+                    <xs:restriction base="xs:decimal">
+                        <xs:minInclusive value="43"/>
+                        <xs:maxInclusive value="67"/>
+                        <xs:pattern value="(\d{2})(\.?)(\d?)"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element ref = "characDb:height">
+                <xs:simpleType>
+                    <xs:restriction base="xs:decimal">
+                        <xs:minInclusive value="42"/>
+                        <xs:maxInclusive value="88"/>
+                        <xs:pattern value="(\d{2})(\.?)(\d?)"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element ref = "characDb:width">
+                <xs:simpleType>
+                    <xs:restriction base="xs:decimal">
+                        <xs:minInclusive value="41"/>
+                        <xs:maxInclusive value="90"/>
+                        <xs:pattern value="(\d{2})(\.?)(\d?)"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name = "laptop_type">
+        <xs:sequence>
+            <xs:element ref = "characDb:name"/>
+            <xs:element ref = "characDb:model"/>
+            <xs:element ref = "characDb:battery_capacity">
+                <xs:simpleType>
+                    <xs:restriction base="xs:positiveInteger">
+                        <xs:minInclusive value="2000"/>
+                        <xs:maxInclusive value="12000"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element ref = "characDb:os">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="Linux"/>
+                        <xs:enumeration value="Windows"/>
+                        <xs:enumeration value="Mac OS"/>
+                        <xs:enumeration value="Dos"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element ref="characDb:memory_ram">
+                <xs:simpleType>
+                    <xs:restriction base="xs:positiveInteger">
+                        <xs:minInclusive value="1"/>
+                        <xs:maxInclusive value="128"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element ref = "characDb:storage_memory">
+                <xs:simpleType>
+                    <xs:restriction base="xs:positiveInteger">
+                        <xs:minInclusive value="32"/>
+                        <xs:maxInclusive value="4000"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element ref = "characDb:cpu">
+                <xs:simpleType>
+                    <xs:restriction base="xs:positiveInteger">
+                        <xs:minInclusive value="800"/>
+                        <xs:maxInclusive value="3800"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element ref = "characDb:display_inches">
+                <xs:simpleType>
+                    <xs:restriction base="xs:decimal">
+                        <xs:minInclusive value="11.6"/>
+                        <xs:maxInclusive value="18.4"/>
+                        <xs:pattern value="(\d{2})(\.?)(\d?)"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name = "refrigerator_type">
+        <xs:sequence>
+            <xs:element ref = "characDb:name"/>
+            <xs:element ref = "characDb:model"/>
+            <xs:element ref = "characDb:power_consumption">
+                <xs:simpleType>
+                    <xs:restriction base="xs:positiveInteger">
+                        <xs:minInclusive value="20"/>
+                        <xs:maxInclusive value="500"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element ref = "characDb:weight">
+                <xs:simpleType>
+                    <xs:restriction base="xs:decimal">
+                        <xs:minInclusive value="4"/>
+                        <xs:maxInclusive value="200"/>
+                        <xs:pattern value="(\d{2})(\.?)(\d?)"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element ref="characDb:freezer_capacity">
+                <xs:simpleType>
+                    <xs:restriction base="xs:positiveInteger">
+                        <xs:minInclusive value="3"/>
+                        <xs:maxInclusive value="600"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element ref = "characDb:overall_capacity">
+                <xs:simpleType>
+                    <xs:restriction base="xs:positiveInteger">
+                        <xs:minInclusive value="20"/>
+                        <xs:maxInclusive value="600"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element ref = "characDb:height">
+                <xs:simpleType>
+                    <xs:restriction base="xs:decimal">
+                        <xs:minInclusive value="30"/>
+                        <xs:maxInclusive value="221"/>
+                        <xs:pattern value="(\d{2})(\.?)(\d?)"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element ref = "characDb:width">
+                <xs:simpleType>
+                    <xs:restriction base="xs:decimal">
+                        <xs:minInclusive value="25"/>
+                        <xs:maxInclusive value="204"/>
+                        <xs:pattern value="(\d{2})(\.?)(\d?)"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name = "vaccuumcleaner_type">
+        <xs:sequence>
+            <xs:element ref = "characDb:name"/>
+            <xs:element ref = "characDb:model"/>
+            <xs:element ref = "characDb:power_consumption">
+                <xs:simpleType>
+                    <xs:restriction base="xs:positiveInteger">
+                        <xs:minInclusive value="10"/>
+                        <xs:maxInclusive value="3600"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element ref = "characDb:vaccuum_power">
+                <xs:simpleType>
+                    <xs:restriction base="xs:positiveInteger">
+                        <xs:minInclusive value="7"/>
+                        <xs:maxInclusive value="750"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element ref="characDb:filter_type">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="[A-Da-d]"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element ref = "characDb:motor_speed_regulation">
+                <xs:simpleType>
+                    <xs:restriction base="xs:positiveInteger">
+                        <xs:minInclusive value="500"/>
+                        <xs:maxInclusive value="5000"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element ref = "characDb:cleaning_width">
+                <xs:simpleType>
+                    <xs:restriction base="xs:positiveInteger">
+                        <xs:minInclusive value="10"/>
+                        <xs:maxInclusive value="70"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name = "tabletpc_type">
+        <xs:sequence>
+            <xs:element ref = "characDb:name"/>
+            <xs:element ref = "characDb:model"/>
+            <xs:element ref = "characDb:battery_capacity">
+                <xs:simpleType>
+                    <xs:restriction base="xs:positiveInteger">
+                        <xs:minInclusive value="2000"/>
+                        <xs:maxInclusive value="10500"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element ref = "characDb:display_inches">
+                <xs:simpleType>
+                    <xs:restriction base="xs:decimal">
+                        <xs:minInclusive value="5"/>
+                        <xs:maxInclusive value="17.3"/>
+                        <xs:pattern value="(\d{2})(\.?)(\d?)"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element ref="characDb:memory_ram">
+                <xs:simpleType>
+                    <xs:restriction base="xs:positiveInteger">
+                        <xs:minInclusive value="1"/>
+                        <xs:maxInclusive value="16"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element ref = "characDb:storage_memory">
+                <xs:simpleType>
+                    <xs:restriction base="xs:positiveInteger">
+                        <xs:minInclusive value="4"/>
+                        <xs:maxInclusive value="2000"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element ref = "characDb:color">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="White"/>
+                        <xs:enumeration value="Black"/>
+                        <xs:enumeration value="Red"/>
+                        <xs:enumeration value="Grey"/>
+                        <xs:enumeration value="Green"/>
+                        <xs:enumeration value="Pink"/>
+                        <xs:enumeration value="Yelow"/>
+                        <xs:enumeration value="Brown"/>
+                        <xs:enumeration value="Gold"/>
+                        <xs:enumeration value="Silver"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name = "speaker_type">
+        <xs:sequence>
+            <xs:element ref = "characDb:name"/>
+            <xs:element ref = "characDb:model"/>
+            <xs:element ref = "characDb:power_consumption">
+                <xs:simpleType>
+                    <xs:restriction base="xs:positiveInteger">
+                        <xs:minInclusive value="5"/>
+                        <xs:maxInclusive value="4000"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element ref = "characDb:number_of_speakers">
+                <xs:simpleType>
+                    <xs:restriction base="xs:positiveInteger">
+                        <xs:minInclusive value="1"/>
+                        <xs:maxInclusive value="7"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element ref = "characDb:frequency_range">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="(\d{1,4})(-)(\d{1,5})"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element ref = "characDb:cord_length">
+                <xs:simpleType>
+                    <xs:restriction base="xs:positiveInteger">
+                        <xs:minInclusive value = "1"/>
+                        <xs:maxInclusive value = "10"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+
+</xs:schema>
